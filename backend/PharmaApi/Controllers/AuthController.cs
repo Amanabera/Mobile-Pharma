@@ -156,7 +156,7 @@ public class AuthController : ControllerBase
             return Ok(new { status = user.Status, role = user.Role });
         }
 
-        // 2. Fallback to Memory
+        // 2. Fallback to Memory please please
         var memUser = _inMemoryUsers.FirstOrDefault(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         if (memUser == null) return NotFound(new { message = "User not found" });
 
